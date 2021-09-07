@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::view('addMembers','addMember');
-Route::post('addMembers',[MemberController::class,'addMember']);
+Route::view('addMembers', 'addMember');
+Route::post('addMembers', [MemberController::class, 'addMember']);
+Route::get('viewMembers', [MemberController::class, 'viewMember']);

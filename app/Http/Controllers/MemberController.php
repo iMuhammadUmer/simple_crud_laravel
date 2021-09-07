@@ -19,4 +19,10 @@ class MemberController extends Controller
 
         return redirect('addMember');
     }
+
+    function viewMember(Request $req)
+    {
+        $data = Member::paginate(5);
+        return view('viewMember', ['members' => $data]);
+    }
 }
