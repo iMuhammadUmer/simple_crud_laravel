@@ -25,4 +25,10 @@ class MemberController extends Controller
         $data = Member::paginate(5);
         return view('viewMember', ['members' => $data]);
     }
+    function deleteMember($m_id)
+    {
+        $data = Member::find($m_id);
+        $data->delete();
+        return redirect('viewMembers');
+    }
 }

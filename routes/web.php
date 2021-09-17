@@ -19,4 +19,6 @@ Route::get('/', function () {
 });
 Route::view('addMembers', 'addMember');
 Route::post('addMembers', [MemberController::class, 'addMember']);
+
 Route::get('viewMembers', [MemberController::class, 'viewMember']);
+Route::get('deleteMember/{m_id}', [MemberController::class, 'deleteMember']);
